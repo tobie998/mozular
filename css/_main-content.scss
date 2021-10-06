@@ -1,0 +1,66 @@
+.main {
+
+    .main-content {
+
+        .content-add-btn {
+            margin: 1.5rem 0 0 3rem;
+
+            button {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.0125rem;
+                color: #fff;
+                outline: none;
+                border: 2px solid #4D64DA;
+                border-radius: 38px;
+                background: #4D64DA;
+                padding: 0.2rem 1rem;
+                vertical-align: baseline;
+                cursor: pointer;
+
+                img {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+
+            }
+        }
+
+        .content-details {
+
+            .details-header {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                padding: 0 1rem;
+                margin-top: 3rem;
+
+                .checkbox {
+                    grid-row: 1 / 3;
+                    border-bottom: 0.5px solid #fff;
+                    margin: auto;
+                    
+                }
+
+                .name, .email, .phone, .source {
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    border-bottom: 0.5px solid #fff;
+                    padding: 0.5rem;
+                }
+
+                .email, .source {
+                    border-left: 0.5px solid #fff;
+                }
+
+               
+
+                .phone {
+                    grid-column: 2;
+                }
+            }
+        }
+    }
+}

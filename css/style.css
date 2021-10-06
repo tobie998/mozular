@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+.sidebar {
+  width: 12.5%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 1s ease-in-out;
+  background-color: #4D64DA;
+}
+.sidebar .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(91, 91, 91, 0.6);
+}
+.sidebar .overlay .sidebar-header .header-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+.sidebar .overlay .sidebar-header .header-avatar .avatar-pic {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebar .overlay .sidebar-header .header-avatar h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.0125rem;
+  line-height: 1.0625rem;
+  margin-top: 0.5rem;
+}
+.sidebar .overlay .sidebar-header .header-menu {
+  display: none;
+}
+.sidebar .overlay .sidebar-main {
+  margin-top: 5rem;
+}
+.sidebar .overlay .sidebar-main .main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .overlay .sidebar-main .main-content .content-icon img {
+  width: 1.5rem;
+  height: 1.35rem;
+}
+.sidebar .overlay .sidebar-main .main-content .setting-icon img {
+  width: 1.403125rem;
+  height: 1.29875rem;
+}
+.sidebar .overlay .sidebar-main .main-content h5 {
+  display: none;
+}
+.sidebar .overlay .sidebar-main .main-content:first-child {
+  margin-bottom: 2rem;
+}
+.sidebar .overlay .close-btn {
+  position: absolute;
+  bottom: 1%;
+  left: 35%;
+  color: white;
+}
+
+.active {
+  left: 0;
+  transition: left 1s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 12.5%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4D64DA;
+  }
+  .sidebar .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(91, 91, 91, 0.6);
+  }
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: #1A1A1A;
+}
+.main .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: rgba(26, 26, 26, 0.5);
+  border-bottom: 0.25px solid rgba(255, 255, 255, 0.2);
+}
+.main .main-header .header-menu img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.main .main-header .header-customer {
+  font-family: "Montserrant", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: 15%;
+  margin-left: 0.5rem;
+}
+.main .main-header .header-task {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 30%;
+  align-items: center;
+  margin: 0 0rem 0 5rem;
+}
+.main .main-header .header-task .task-searching .search-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.main .main-header .header-task .task-searching .input {
+  display: none;
+}
+.main .main-header .header-task .task-profile {
+  background-color: #2E2E2E;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main .main-header .header-task .task-profile .profile-info {
+  display: none;
+}
+.main .main-header .header-task .task-profile .profile-img img {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (min-width: 375px) {
+  .main .main-header .header-customer {
+    margin-left: -3rem;
+  }
+  .main .main-header .header-task {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .main .main-header .header-customer {
+    margin-left: -5rem;
+  }
+  .main .main-header .header-task {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    margin-left: 12.5%;
+    width: calc(100% - 12.5%);
+    height: 100vh;
+    color: white;
+    background-color: #1A1A1A;
+  }
+  .main button {
+    display: none;
+  }
+}
+.main .main-content .content-add-btn {
+  margin: 1.5rem 0 0 3rem;
+}
+.main .main-content .content-add-btn button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.0125rem;
+  color: #fff;
+  outline: none;
+  border: 2px solid #4D64DA;
+  border-radius: 38px;
+  background: #4D64DA;
+  padding: 0.2rem 1rem;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+.main .main-content .content-add-btn button img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.main .main-content .content-details .details-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+.main .main-content .content-details .details-header .checkbox {
+  grid-row: 1/3;
+  border-bottom: 0.5px solid #fff;
+  margin: auto;
+}
+.main .main-content .content-details .details-header .name, .main .main-content .content-details .details-header .email, .main .main-content .content-details .details-header .phone, .main .main-content .content-details .details-header .source {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-bottom: 0.5px solid #fff;
+  padding: 0.5rem;
+}
+.main .main-content .content-details .details-header .email, .main .main-content .content-details .details-header .source {
+  border-left: 0.5px solid #fff;
+}
+.main .main-content .content-details .details-header .phone {
+  grid-column: 2;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+a,
+p, ul, li {
+  margin-bottom: 0;
+}/*# sourceMappingURL=style.css.map */
