@@ -31,16 +31,14 @@
 
             .details-header {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: 10% 90%;
+                grid-template-rows: repeat(4, 1fr);
                 padding: 0 1rem;
                 margin-top: 3rem;
 
                 .checkbox {
-                    grid-row: 1 / 3;
-                    border-bottom: 0.5px solid #fff;
-                    margin: auto;
-                    
+                    grid-row: 1 / 5;
+                    margin: auto; 
                 }
 
                 .name, .email, .phone, .source {
@@ -51,14 +49,244 @@
                     padding: 0.5rem;
                 }
 
-                .email, .source {
-                    border-left: 0.5px solid #fff;
+                .phone, .source {
+                    grid-column: 2;
+                }
+            }
+
+            .details-item {
+                display: grid;
+                grid-template-columns: 10% 90%;
+                grid-template-rows: repeat(4, 1fr);
+                padding: 0 1rem;
+                margin-top: 2rem;
+
+                .checkbox {
+                    grid-row: 1 / 5;
+                    margin: auto;
                 }
 
-               
+                .name, .email, .phone, .source {
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    padding: 0.5rem;
+                }
 
-                .phone {
-                    grid-column: 2;
+                .name {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+
+        .main-content {
+    
+            .content-add-btn {
+                margin: 1.5rem 0 0 4.75rem;
+    
+                button {
+                    font-size: 0.875rem;
+                    padding: 0.5rem 2.25rem;
+                    cursor: pointer;
+                    transition: all 0.5s ease-out;
+    
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        vertical-align: bottom;
+                        margin-left: 0.625rem;
+                    }
+
+                    &:hover {
+                        color: #4D64DA;
+                        border: 2px solid #fff;
+                        background-color: #fff;
+                        transition: all 0.4s ease-in-out;
+
+                        img {
+                            background-color: #4D64DA;
+                        }
+                    }
+    
+                }
+            }
+    
+            .content-details {
+    
+                .details-header {
+
+                    .checkbox {
+
+                        input[type=checkbox] {
+                            height: 1rem;
+                        }
+                    }
+    
+                    .name, .email, .phone, .source {
+                        font-size: 1.0625rem;
+                    }
+    
+                }
+    
+                .details-item {
+    
+                    .checkbox {
+
+                        input[type=checkbox] {
+                            height: 1rem;
+                        }
+                    }
+
+                    .name, .email, .phone, .source {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+
+        .main-content {
+    
+            .content-add-btn {
+                margin: 1.5rem 0 0 4.75rem;
+    
+                button {
+                    font-size: 0.875rem;
+                    padding: 0.5rem 2.25rem;
+                    cursor: pointer;
+                    transition: all 0.5s ease-out;
+    
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        vertical-align: bottom;
+                        margin-left: 0.625rem;
+                    }
+
+                    &:hover {
+                        color: #4D64DA;
+                        border: 2px solid #fff;
+                        background-color: #fff;
+                        transition: all 0.4s ease-in-out;
+
+                        img {
+                            background-color: #4D64DA;
+                        }
+                    }
+    
+                }
+            }
+    
+            .content-details {
+    
+                .details-header {
+                    display: grid;
+                    grid-template-columns: 8% 26% 35% 17% 15%;
+                    grid-template-rows: unset;
+                    margin: 1.5rem 4.75rem 0;
+                    padding: 0;
+
+                    .checkbox {
+                        width: 100%;
+                        height: 100%;
+                        border-bottom: 0.5px solid #fff;
+
+                        input {
+                            width: 100%;
+                            margin: -0.2rem auto;
+                            vertical-align: bottom;
+                        }
+                    }
+    
+                    .phone, .source, .checkbox {
+                        grid-column: unset;
+                        grid-row: unset;
+                    }
+
+                    .phone, .source, .email, .name {
+                        padding-left: 1rem;
+                        border-left: 0.5px solid #fff;
+                    }
+    
+                }
+    
+                .details-item {
+                    display: grid;
+                    grid-template-columns: 8% 26% 35% 17% 15%;
+                    grid-template-rows: unset;
+                    margin: 0.5rem 4.75rem 0;
+                    padding: 0;
+
+                    .checkbox {
+                        width: 100%;
+                        height: 100%;
+
+                        input {
+                            width: 100%;
+                            margin: -0.8rem auto;
+                            vertical-align: bottom;
+                        }
+                    }
+    
+                    .phone, .source, .checkbox {
+                        grid-column: unset;
+                        grid-row: unset;
+                    }
+
+                    .phone, .source, .email, .name {
+                        padding: 1.125rem 0 1.125rem 1rem;
+                    } 
+
+                    &:hover {
+                        background-color: #2E2E2E;
+                        border-radius: 36px;
+                    }
+                }
+
+                .first-item {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main {
+
+        .main-content {
+    
+            .content-details {
+    
+                .details-header {
+
+                    .phone, .source, .email, .name {
+                        padding-left: 3.25rem;
+                        border-left: 0.5px solid #fff;
+                    }
+                }
+    
+                .details-item {
+
+                    .phone, .source, .email, .name {
+                        padding: 1.125rem 0 1.125rem 3.25rem;
+                    }  
                 }
             }
         }

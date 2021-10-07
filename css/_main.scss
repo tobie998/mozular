@@ -1,6 +1,6 @@
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     color: white;
     background-color: #1A1A1A;
 
@@ -10,7 +10,7 @@
         justify-content: space-between;
         padding: 0.5rem;
         background-color: rgba(26,26,26,0.5);
-        border-bottom: 0.25px solid rgba(255,255,255,0.2);
+        border-bottom: 0.25px solid rgba(255,255,255,0.3);
     
         .header-menu {
 
@@ -110,12 +110,149 @@
     .main {
         margin-left: 12.5%;
         width: calc(100% - 12.5%);
+        height: 100%;
+        color: white;
+        background-color: #1A1A1A;
+
+        .main-header {
+            padding: 1.3125rem 4.75rem;
+            
+            .header-menu {
+                display: none;
+            }
+
+            .header-customer {
+                font-size: 1.3125rem;
+                margin-left: 0;
+                letter-spacing: 0.0015rem;
+            }
+
+            .header-task {
+                flex: 0 0 40%;
+                align-items: center;
+                margin: 0;
+                
+    
+                .task-searching {
+                    margin-right: 1rem;
+    
+                    .input {
+                        display: none;
+                    }
+                }
+    
+                .task-profile {
+                    background-color: #2E2E2E;
+                    padding: 0.544375rem 1.0625rem 0.481875rem 3.369375rem;
+                    border-radius: 32.5px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 14.625rem;
+                    height: 3.375rem;
+    
+                    .profile-info {
+                        display: block;
+                        margin-right: 1.568125rem;
+
+                        h6, p {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 0.875rem;
+                            line-height: 17px;
+                        }
+
+                        h6 {
+                            font-weight: 700;
+                            color: #fff;
+                        }
+
+                        p {
+                            text-align: right;
+                            font-weight: 400;
+                            color: rgba(255,255,255,0.5);
+                        }
+
+                    }
+    
+                    .profile-img {
+                        
+                        img {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .main {
+        margin-left: 12.5%;
+        width: calc(100% - 12.5%);
         height: 100vh;
         color: white;
         background-color: #1A1A1A;
 
-        button {
-            display: none;
-        }
+        .main-header {
+    
+            .header-customer {
+                font-size: 1.3125rem;
+                margin-left: 0;
+                letter-spacing: 0.0015rem;
+            }
+
+            .header-task {
+                flex: none;
+                align-items: center;
+                margin: 0;
+            
+                .task-searching {
+                    margin-right: 1rem;
+    
+                    .input {
+                        display: none;
+                    }
+                }
+    
+                .task-profile {
+                    background-color: #2E2E2E;
+                    padding: 0.544375rem 1.0625rem 0.481875rem 3.369375rem;
+                    border-radius: 32.5px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 14.625rem;
+                    height: 3.375rem;
+    
+                    .profile-info {
+                        display: block;
+                        margin-right: 1.568125rem;
+
+                        h6, p {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 0.875rem;
+                            line-height: 17px;
+                        }
+
+                        h6 {
+                            font-weight: 700;
+                            color: #fff;
+                        }
+                    }
+    
+                    .profile-img {
+                        
+                        img {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+                }
+            }
+        }    
     }
 }
