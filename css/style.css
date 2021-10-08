@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .sidebar {
@@ -101,15 +102,6 @@
   }
 }
 @media screen and (min-width: 991px) {
-  .sidebar {
-    width: 12.5%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #4D64DA;
-    transition: none;
-  }
   .sidebar .overlay .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -222,6 +214,7 @@
   background-color: #1A1A1A;
 }
 .main .main-header {
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -353,7 +346,7 @@
   .main {
     margin-left: 12.5%;
     width: calc(100% - 12.5%);
-    height: 100vh;
+    height: 100%;
     color: white;
     background-color: #1A1A1A;
   }
@@ -402,6 +395,9 @@
     height: 2rem;
   }
 }
+.main .main-content {
+  height: 100%;
+}
 .main .main-content .content-add-btn {
   margin: 1.5rem 0 0 3rem;
 }
@@ -434,6 +430,29 @@
   grid-row: 1/5;
   margin: auto;
 }
+.main .main-content .content-details .details-header .checkbox input[type=checkbox] {
+  height: 1rem;
+  width: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-content .content-details .details-header .checkbox input[type=checkbox]::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  display: none;
+}
+.main .main-content .content-details .details-header .checkbox input[type=checkbox]:checked::after {
+  display: block;
+}
 .main .main-content .content-details .details-header .name, .main .main-content .content-details .details-header .email, .main .main-content .content-details .details-header .phone, .main .main-content .content-details .details-header .source {
   font-family: "Nunito", sans-serif;
   font-size: 0.875rem;
@@ -455,6 +474,29 @@
   grid-row: 1/5;
   margin: auto;
 }
+.main .main-content .content-details .details-item .checkbox input[type=checkbox] {
+  height: 1rem;
+  width: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-content .content-details .details-item .checkbox input[type=checkbox]::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  display: none;
+}
+.main .main-content .content-details .details-item .checkbox input[type=checkbox]:checked::after {
+  display: block;
+}
 .main .main-content .content-details .details-item .name, .main .main-content .content-details .details-item .email, .main .main-content .content-details .details-item .phone, .main .main-content .content-details .details-item .source {
   font-family: "Nunito", sans-serif;
   font-size: 0.875rem;
@@ -472,6 +514,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .main .main-content {
+    height: 100vh;
+  }
   .main .main-content .content-add-btn {
     margin: 1.5rem 0 0 4.75rem;
   }
@@ -545,10 +590,11 @@
     width: 100%;
     height: 100%;
     border-bottom: 0.5px solid #fff;
+    text-align: center;
   }
   .main .main-content .content-details .details-header .checkbox input {
     width: 100%;
-    margin: -0.2rem auto;
+    margin: 0.8rem auto 0;
     vertical-align: bottom;
   }
   .main .main-content .content-details .details-header .phone, .main .main-content .content-details .details-header .source, .main .main-content .content-details .details-header .checkbox {
@@ -569,22 +615,32 @@
   .main .main-content .content-details .details-item .checkbox {
     width: 100%;
     height: 100%;
+    text-align: center;
   }
   .main .main-content .content-details .details-item .checkbox input {
     width: 100%;
-    margin: -0.8rem auto;
+    margin: 1.4rem auto 0;
     vertical-align: bottom;
   }
   .main .main-content .content-details .details-item .phone, .main .main-content .content-details .details-item .source, .main .main-content .content-details .details-item .checkbox {
     grid-column: unset;
     grid-row: unset;
   }
-  .main .main-content .content-details .details-item .phone, .main .main-content .content-details .details-item .source, .main .main-content .content-details .details-item .email, .main .main-content .content-details .details-item .name {
+  .main .main-content .content-details .details-item .phone, .main .main-content .content-details .details-item .source, .main .main-content .content-details .details-item .email {
     padding: 1.125rem 0 1.125rem 1rem;
   }
   .main .main-content .content-details .details-item:hover {
     background-color: #2E2E2E;
     border-radius: 36px;
+  }
+  .main .main-content .content-details .details-item .name {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 0 0.625rem 1rem;
+  }
+  .main .main-content .content-details .details-item .name img {
+    width: 2.25rem;
+    height: 2.25rem;
   }
   .main .main-content .content-details .first-item {
     margin-top: 1.5rem;
@@ -595,8 +651,405 @@
     padding-left: 3.25rem;
     border-left: 0.5px solid #fff;
   }
-  .main .main-content .content-details .details-item .phone, .main .main-content .content-details .details-item .source, .main .main-content .content-details .details-item .email, .main .main-content .content-details .details-item .name {
+  .main .main-content .content-details .details-item .phone, .main .main-content .content-details .details-item .source, .main .main-content .content-details .details-item .email {
     padding: 1.125rem 0 1.125rem 3.25rem;
+  }
+  .main .main-content .content-details .details-item .name {
+    padding: 0.625rem 0 0.625rem 3.25rem;
+  }
+}
+.main .client-detail-header .header-content {
+  flex: 0 0 36%;
+}
+.main .client-detail-header .header-content .content-back {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.main .client-detail-header .header-content .content-back img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.main .client-detail-header .header-content .content-back p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.0015rem;
+}
+.main .client-detail-header .header-task {
+  margin-left: 3rem;
+}
+.main .client-detail-main .main-upload-img {
+  border-radius: 36px;
+  width: 14.25rem;
+  height: 14.25rem;
+  margin: 3.5rem auto 0;
+  text-align: center;
+  padding: 5.5rem 0rem;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.main .client-detail-main .main-upload-img img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0.573125rem;
+}
+.main .client-detail-main .main-upload-img p {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.main .client-detail-main .main-form {
+  width: 80%;
+  margin: 3rem auto 0;
+}
+.main .client-detail-main .main-form .form-input .form-general label {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  letter-spacing: 0.001rem;
+  color: #C1C1C1;
+}
+.main .client-detail-main .main-form .form-input .form-general input[type=text] {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5B5B5B;
+  padding: 1rem 0;
+  color: #fff;
+}
+.main .client-detail-main .main-form .form-input .form-general ::-moz-placeholder {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.005rem;
+}
+.main .client-detail-main .main-form .form-input .form-general :-ms-input-placeholder {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.005rem;
+}
+.main .client-detail-main .main-form .form-input .form-general ::placeholder {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.005rem;
+}
+.main .client-detail-main .main-form .form-input .form-sex {
+  margin-top: 1rem;
+}
+.main .client-detail-main .main-form .form-input .form-sex .radio-btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #5B5B5B;
+}
+.main .client-detail-main .main-form .form-input .form-sex .radio-btn .male-btn, .main .client-detail-main .main-form .form-input .form-sex .radio-btn .female-btn {
+  display: flex;
+  align-items: center;
+}
+.main .client-detail-main .main-form .form-input .form-sex .radio-btn .male-btn label, .main .client-detail-main .main-form .form-input .form-sex .radio-btn .female-btn label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.005rem;
+  color: #fff;
+}
+.main .client-detail-main .main-form .form-input .form-sex .radio-btn .male-btn input[type=radio], .main .client-detail-main .main-form .form-input .form-sex .radio-btn .female-btn input[type=radio] {
+  margin-right: 1.25rem;
+}
+.main .client-detail-main .main-form .form-input .form-sex .radio-btn .male-btn {
+  margin-right: 3.375rem;
+}
+.main .client-detail-main .main-form .form-input .form-id, .main .client-detail-main .main-form .form-input .form-sex, .main .client-detail-main .main-form .form-input .form-phone,
+.main .client-detail-main .main-form .form-input .form-address, .main .client-detail-main .main-form .form-input .form-email, .main .client-detail-main .main-form .form-input .form-source {
+  margin-top: 0.75rem;
+}
+.main .client-detail-main .main-form .form-input .form-birth {
+  margin-top: 1rem;
+}
+.main .client-detail-main .main-form .form-btn {
+  margin-top: 3.375rem;
+  padding-bottom: 8.75rem;
+  text-align: right;
+}
+.main .client-detail-main .main-form .form-btn .btn {
+  padding: 0.75rem 3.3125rem;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 38px;
+  cursor: pointer;
+}
+.main .client-detail-main .main-form .form-btn .btn-cancel {
+  background-color: transparent;
+  border: 2px solid #9F9F9F;
+  margin-bottom: 1rem;
+}
+.main .client-detail-main .main-form .form-btn .btn-create {
+  background-color: #4D64DA;
+  border: 2px solid #4D64DA;
+  transition: all 0.2s ease-in;
+}
+.main .client-detail-main .main-form .form-btn .btn-create:hover {
+  background-color: #fff;
+  color: #4D64DA;
+  border: 2px solid #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 375px) {
+  .main .client-detail-header .header-content {
+    flex: unset;
+    margin-left: 1rem;
+  }
+  .main .client-detail-header .header-content .content-back p {
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .main .client-detail-header .header-content {
+    flex: unset;
+    margin-left: 0rem;
+  }
+  .main .client-detail-header .header-content .content-back img {
+    margin-right: 0.5rem;
+  }
+  .main .client-detail-main .main-form .form-btn .btn-cancel {
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .client-detail-header .header-content {
+    flex: unset;
+    margin-left: 0rem;
+  }
+  .main .client-detail-header .header-content .content-back img {
+    margin-right: 1rem;
+  }
+  .main .client-detail-header .header-content .content-back p {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  .main .client-detail-main .main-form .form-btn .btn-create {
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  .main .client-detail-header .header-content .content-back p {
+    font-size: 1.3125rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .main .client-detail-main {
+    display: flex;
+    width: 46.75rem;
+    margin: 0 auto;
+  }
+  .main .client-detail-main .main-upload-img,
+.main .client-detail-main .main-form {
+    margin: 3.5rem 0 0;
+  }
+  .main .client-detail-main .main-upload-img {
+    margin-right: 2rem;
+  }
+  .main .client-detail-main .main-form {
+    width: 30.5rem;
+  }
+}
+.main .client-detail-2-main .main-upload-img {
+  width: unset;
+  height: unset;
+  border-radius: unset;
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+.main .client-detail-2-main .main-upload-img img {
+  width: 14.25rem;
+  height: 14.25rem;
+  margin-bottom: 0;
+}
+.main .client-detail-2-main .main-upload-img .btn-delete {
+  display: block;
+  width: 14.25rem;
+  height: 2.75rem;
+  padding: 0.75rem 3.75rem;
+  margin: 2rem auto 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 38px;
+  background-color: #2E2E2E;
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+.main .client-detail-2-main .main-upload-img .btn-delete:hover {
+  background-color: #fff;
+  color: #2E2E2E;
+  transition: all 0.2s ease-out;
+}
+
+.main-1 {
+  margin-left: 0;
+  width: 100%;
+}
+.main-1 .main-header .header-menu {
+  display: none;
+}
+.main-1 .main-header .header-customer {
+  margin-left: 3rem;
+}
+.main-1 .main-content {
+  height: 100%;
+  padding-bottom: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-1 .main-header .header-customer {
+    margin-left: 0rem;
+  }
+  .main-1 .main-content {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main-1 .main-header {
+    padding: 1.3125rem 12.25rem;
+  }
+  .main-1 .main-content .content-add-btn {
+    margin: 1.5rem 0 0 12.25rem;
+  }
+  .main-1 .main-content .content-details .details-header,
+.main-1 .main-content .content-details .details-item {
+    margin: 1.5rem 12.25rem 0;
+  }
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: unset;
+  height: 6rem;
+  width: 100%;
+  background-color: #4D64DA;
+}
+.footer .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(91, 91, 91, 0.6);
+  padding: 1.40625rem 0;
+}
+.footer .overlay .sidebar-main {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.footer .overlay .sidebar-main .header-avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: center;
+  margin: 0 2rem 0 3rem;
+}
+.footer .overlay .sidebar-main .header-avatar .avatar-pic {
+  margin-right: 0.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .overlay .sidebar-main .header-avatar h6 {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.0125rem;
+  line-height: 1.0625rem;
+}
+.footer .overlay .sidebar-main .main-content {
+  flex-direction: column;
+  margin-left: 0;
+}
+.footer .overlay .sidebar-main .main-content .content-icon {
+  margin: 0 auto 0.7rem;
+}
+.footer .overlay .sidebar-main .main-content .content-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.footer .overlay .sidebar-main .main-content h5 {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #FFF;
+}
+.footer .overlay .sidebar-main .main-content .content-cus {
+  font-weight: 600;
+}
+.footer .overlay .sidebar-main .main-content:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 375px) {
+  .footer .overlay .sidebar-main .header-avatar {
+    margin: 0 4rem 0 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .overlay {
+    padding: 1.40625rem 4.75rem;
+  }
+  .footer .overlay .sidebar-main .header-avatar {
+    margin: 0 12.21875rem 0 0rem;
+  }
+  .footer .overlay .sidebar-main .header-avatar .avatar-pic {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .footer .overlay .sidebar-main .header-avatar h6 {
+    font-size: 0.875rem;
+  }
+  .footer .overlay .sidebar-main .main-content:not(:last-child) {
+    margin-right: 4.6875rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer .overlay {
+    padding: 1.40625rem 12.25rem;
+  }
+  .footer .overlay .sidebar-main .header-avatar {
+    margin: 0 12.21875rem 0 0rem;
+  }
+  .footer .overlay .sidebar-main .header-avatar .avatar-pic {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .footer .overlay .sidebar-main .header-avatar h6 {
+    font-size: 0.875rem;
+  }
+  .footer .overlay .sidebar-main .main-content:not(:last-child) {
+    margin-right: 4.6875rem;
   }
 }
 *, *::after, *::before {
@@ -613,6 +1066,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 a,
-p, ul, li {
+p, ul, li,
+label {
   margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

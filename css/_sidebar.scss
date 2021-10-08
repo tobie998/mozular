@@ -5,7 +5,7 @@
     top: 0;
     left: -100%;
     transition: left 1s ease-in-out;
-    background-color: #4D64DA;
+    background-color: $blue;
 
     .overlay {
         width: 100%;
@@ -92,7 +92,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #4D64DA;
+        background-color: $blue;
         transition: none;
     
         .overlay {
@@ -130,13 +130,6 @@
 
 @media screen and (min-width: 991px) {
     .sidebar {
-        width: 12.5%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #4D64DA;
-        transition: none;
     
         .overlay {
 

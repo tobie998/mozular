@@ -1,0 +1,60 @@
+.main-1 {
+    margin-left: 0;
+    width: 100%;
+
+    .main-header {
+
+        .header-menu {
+            display: none;
+        }
+
+        .header-customer {
+            margin-left: 3rem;
+        }
+    }
+
+    .main-content {
+        height: 100%;
+        padding-bottom: 6rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-1 {
+    
+        .main-header {
+    
+            .header-customer {
+                margin-left: 0rem;
+            }
+        }
+
+        .main-content {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-1  {
+
+        .main-header {
+            padding: 1.3125rem 12.25rem;
+        }
+
+        .main-content {
+
+            .content-add-btn {
+                margin: 1.5rem 0 0 12.25rem;
+            }
+
+            .content-details {
+
+                .details-header,
+                .details-item {
+                    margin: 1.5rem 12.25rem 0;
+                }
+            }
+        }
+    }
+}

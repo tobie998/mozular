@@ -1,0 +1,43 @@
+.main {
+
+    .client-detail-2-main {
+
+        .main-upload-img {
+            width: unset;
+            height: unset;
+            border-radius: unset;
+            border: none;
+            padding: 0;
+            text-align: center;
+
+            img {
+                width: 14.25rem;
+                height: 14.25rem;
+                margin-bottom: 0;
+            }
+
+            .btn-delete {
+                display: block;
+                width: 14.25rem;
+                height: 2.75rem;
+                padding: 0.75rem 3.75rem;
+                margin: 2rem auto 0;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1rem;
+                font-weight: 600;
+                border: none;
+                outline: none;
+                border-radius: 38px;
+                background-color: #2E2E2E;
+                color: #fff;
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #2E2E2E;
+                    transition: all 0.2s ease-out;
+                }
+            }
+        }
+    }
+}

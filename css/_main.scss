@@ -5,6 +5,7 @@
     background-color: #1A1A1A;
 
     .main-header {
+        height: 6rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -192,7 +193,7 @@
     .main {
         margin-left: 12.5%;
         width: calc(100% - 12.5%);
-        height: 100vh;
+        height: 100%;
         color: white;
         background-color: #1A1A1A;
 
