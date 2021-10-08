@@ -28,13 +28,13 @@
                 border: none;
                 outline: none;
                 border-radius: 38px;
-                background-color: #2E2E2E;
-                color: #fff;
+                background-color: $black-2;
+                color: $white;
                 transition: all 0.2s ease-in;
 
                 &:hover {
-                    background-color: #fff;
-                    color: #2E2E2E;
+                    background-color: $white;
+                    color: $black-2;
                     transition: all 0.2s ease-out;
                 }
             }

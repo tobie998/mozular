@@ -5,12 +5,12 @@
     top: unset;
     height: 6rem;
     width: 100%;
-    background-color: #4D64DA;
+    background-color: $blue;
 
     .overlay {
         width: 100%;
         height: 100%;
-        background-color: rgba(91,91,91,0.6);
+        background-color: $overlay-color;
         padding: 1.40625rem 0;
 
         .sidebar-main {
@@ -29,7 +29,7 @@
                     margin-right: 0.5rem;
                     width: 1.8rem;
                     height: 1.8rem;
-                    background-color: #FFFFFF;
+                    background-color: $white;
                     border-radius: 50%;  
                     cursor: pointer;
                 }
@@ -39,7 +39,7 @@
                     font-family: 'Montserrat', sans-serif;
                     font-size: 0.75rem;
                     font-weight: 600;
-                    color: #FFFFFF;
+                    color: $white;
                     letter-spacing: 0.0125rem;
                     line-height: 1.0625rem;
                 }
@@ -63,7 +63,7 @@
                     font-family: 'Montserrat', sans-serif;
                     font-size: 0.875rem;
                     font-weight: 400;
-                    color: #FFF;
+                    color: $white;
                 }
 
                 .content-cus {

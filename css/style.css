@@ -25,7 +25,7 @@
 .sidebar .overlay .sidebar-header .header-avatar .avatar-pic {
   width: 1.8rem;
   height: 1.8rem;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -33,7 +33,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #fff;
   letter-spacing: 0.0125rem;
   line-height: 1.0625rem;
   margin-top: 0.5rem;
@@ -63,7 +63,7 @@
   position: absolute;
   bottom: 1%;
   left: 35%;
-  color: white;
+  color: #fff;
 }
 
 .active {
@@ -144,7 +144,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
-    color: #FFF;
+    color: #fff;
   }
   .sidebar .overlay .sidebar-main .main-content .content-cus {
     font-weight: 600;
@@ -201,7 +201,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
-    color: #FFF;
+    color: #fff;
   }
   .sidebar .overlay .sidebar-main .main-content .content-cus {
     font-weight: 600;
@@ -210,7 +210,7 @@
 .main {
   width: 100%;
   height: 100%;
-  color: white;
+  color: #fff;
   background-color: #1A1A1A;
 }
 .main .main-header {
@@ -283,8 +283,6 @@
     margin-left: 12.5%;
     width: calc(100% - 12.5%);
     height: 100%;
-    color: white;
-    background-color: #1A1A1A;
   }
   .main .main-header {
     padding: 1.3125rem 4.75rem;
@@ -309,7 +307,6 @@
     display: none;
   }
   .main .main-header .header-task .task-profile {
-    background-color: #2E2E2E;
     padding: 0.544375rem 1.0625rem 0.481875rem 3.369375rem;
     border-radius: 32.5px;
     cursor: pointer;
@@ -347,8 +344,6 @@
     margin-left: 12.5%;
     width: calc(100% - 12.5%);
     height: 100%;
-    color: white;
-    background-color: #1A1A1A;
   }
   .main .main-header .header-customer {
     font-size: 1.3125rem;
@@ -367,7 +362,6 @@
     display: none;
   }
   .main .main-header .header-task .task-profile {
-    background-color: #2E2E2E;
     padding: 0.544375rem 1.0625rem 0.481875rem 3.369375rem;
     border-radius: 32.5px;
     cursor: pointer;
@@ -380,15 +374,6 @@
   .main .main-header .header-task .task-profile .profile-info {
     display: block;
     margin-right: 1.568125rem;
-  }
-  .main .main-header .header-task .task-profile .profile-info h6, .main .main-header .header-task .task-profile .profile-info p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.875rem;
-    line-height: 17px;
-  }
-  .main .main-header .header-task .task-profile .profile-info h6 {
-    font-weight: 700;
-    color: #fff;
   }
   .main .main-header .header-task .task-profile .profile-img img {
     width: 2rem;
@@ -569,15 +554,6 @@
     height: 1.5rem;
     vertical-align: bottom;
     margin-left: 0.625rem;
-  }
-  .main .main-content .content-add-btn button:hover {
-    color: #4D64DA;
-    border: 2px solid #fff;
-    background-color: #fff;
-    transition: all 0.4s ease-in-out;
-  }
-  .main .main-content .content-add-btn button:hover img {
-    background-color: #4D64DA;
   }
   .main .main-content .content-details .details-header {
     display: grid;
@@ -973,7 +949,7 @@
   margin-right: 0.5rem;
   width: 1.8rem;
   height: 1.8rem;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -982,7 +958,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #fff;
   letter-spacing: 0.0125rem;
   line-height: 1.0625rem;
 }
@@ -1002,7 +978,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #FFF;
+  color: #fff;
 }
 .footer .overlay .sidebar-main .main-content .content-cus {
   font-weight: 600;
